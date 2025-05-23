@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'rustydeb'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rustydeb",
+                    "--package=rustydeb"
+                ],
+                "filter": {
+                    "name": "rustydeb",
+                    "kind": "bin"
+                }
+            },
+            "args": ["/home/pacifista/Downloads/hydralauncher_3.5.2_amd64.deb"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'rustydeb'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=rustydeb",
+                    "--package=rustydeb"
+                ],
+                "filter": {
+                    "name": "rustydeb",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
